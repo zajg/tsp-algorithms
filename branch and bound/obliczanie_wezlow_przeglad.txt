@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	for (int n = 4; n < 20; n++){
+	
+		unsigned long long int wynik = 1;
+	
+		for ( int krok = 1; n - krok > 1; krok++){
+		
+			int skladnik = n - 1;
+		
+			for(int kroczek = 1; n - krok - kroczek > 1; kroczek++){
+				skladnik *= (n - 1 - kroczek);
+			}
+			
+			wynik += skladnik;
+		
+	}
+	
+	//cout<<"rozmiar="<<n<<" wynik="<<wynik<<endl;
+	cout<<wynik<<endl;
+	
+	}
+	
+	return 0;
+}
